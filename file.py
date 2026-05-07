@@ -9,9 +9,8 @@ from pathlib import Path
 # =========================================
 @st.cache_resource
 def load_model():
-    MODEL_PATH = Path(__file__).parent / "model_orange.pickle"
+    MODEL_PATH = Path(__file__).parent / "model_orange.pkcls"
     if not MODEL_PATH.exists():
-        st.error("❌ File model_orange.pickle tidak ditemukan di repository. Pastikan sudah di-upload ke GitHub.")
         return None
 
     try:
